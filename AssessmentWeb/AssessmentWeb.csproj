@@ -1,0 +1,376 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{34D97EA2-7C87-4132-A97B-A8084AC9F5C4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AssessmentWeb</RootNamespace>
+    <AssemblyName>AssessmentWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\chgPassword.aspx" />
+    <Content Include="App_Data\Database1.mdf" />
+    <Content Include="App_Data\Database1_log.ldf">
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
+    <Content Include="Assessment\EndMultiQuestionAssessment.aspx" />
+    <Content Include="Assessment\EndQuestionAssessment.aspx" />
+    <Content Include="Assessment\FreeTestAssessment.aspx" />
+    <Content Include="Assessment\MultiQuestionAssessment.aspx" />
+    <Content Include="Assessment\StartAssessment.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Login.aspx" />
+    <Content Include="Private\AddGroupDetails.aspx" />
+    <Content Include="Private\AddGroupMenu.aspx" />
+    <Content Include="Private\AssignTest.aspx" />
+    <Content Include="Private\AssignTestPart2.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="Student\QuestionMenu.aspx" />
+    <Content Include="Student\Student.aspx" />
+    <Content Include="Student\ViewAssessment.aspx" />
+    <Content Include="Tutor\AddFreeTest.aspx" />
+    <Content Include="Tutor\AddMultipleTest.aspx" />
+    <Content Include="Tutor\AddTestMenu.aspx" />
+    <Content Include="Tutor\CheckFreeTestQuestions.aspx" />
+    <Content Include="Tutor\CheckMultiQuestions.aspx" />
+    <Content Include="Tutor\CheckQuestion.aspx" />
+    <Content Include="Tutor\CompleteMarks.aspx" />
+    <Content Include="Tutor\MarksFreeTest.aspx" />
+    <Content Include="Tutor\MarksFreeTestDetails.aspx" />
+    <Content Include="Tutor\Tutor.aspx" />
+    <Content Include="Tutor\ViewGroup.aspx" />
+    <Content Include="Tutor\ViewGroupDetails.aspx" />
+    <Content Include="Tutor\ViewStudentResult.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\chgPassword.aspx.cs">
+      <DependentUpon>chgPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\chgPassword.aspx.designer.cs">
+      <DependentUpon>chgPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment\EndMultiQuestionAssessment.aspx.cs">
+      <DependentUpon>EndMultiQuestionAssessment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assessment\EndMultiQuestionAssessment.aspx.designer.cs">
+      <DependentUpon>EndMultiQuestionAssessment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment\EndQuestionAssessment.aspx.cs">
+      <DependentUpon>EndQuestionAssessment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assessment\EndQuestionAssessment.aspx.designer.cs">
+      <DependentUpon>EndQuestionAssessment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment\FreeTestAssessment.aspx.cs">
+      <DependentUpon>FreeTestAssessment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assessment\FreeTestAssessment.aspx.designer.cs">
+      <DependentUpon>FreeTestAssessment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment\MultiQuestionAssessment.aspx.cs">
+      <DependentUpon>MultiQuestionAssessment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assessment\MultiQuestionAssessment.aspx.designer.cs">
+      <DependentUpon>MultiQuestionAssessment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment\StartAssessment.aspx.cs">
+      <DependentUpon>StartAssessment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Assessment\StartAssessment.aspx.designer.cs">
+      <DependentUpon>StartAssessment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Private\AddGroupDetails.aspx.cs">
+      <DependentUpon>AddGroupDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Private\AddGroupDetails.aspx.designer.cs">
+      <DependentUpon>AddGroupDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Private\AddGroupMenu.aspx.cs">
+      <DependentUpon>AddGroupMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Private\AddGroupMenu.aspx.designer.cs">
+      <DependentUpon>AddGroupMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Private\AssignTest.aspx.cs">
+      <DependentUpon>AssignTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Private\AssignTest.aspx.designer.cs">
+      <DependentUpon>AssignTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Private\AssignTestPart2.aspx.cs">
+      <DependentUpon>AssignTestPart2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Private\AssignTestPart2.aspx.designer.cs">
+      <DependentUpon>AssignTestPart2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\QuestionMenu.aspx.cs">
+      <DependentUpon>QuestionMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\QuestionMenu.aspx.designer.cs">
+      <DependentUpon>QuestionMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Student.aspx.cs">
+      <DependentUpon>Student.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\Student.aspx.designer.cs">
+      <DependentUpon>Student.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\ViewAssessment.aspx.cs">
+      <DependentUpon>ViewAssessment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\ViewAssessment.aspx.designer.cs">
+      <DependentUpon>ViewAssessment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TutorMasterPage.Master.cs">
+      <DependentUpon>TutorMasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TutorMasterPage.Master.designer.cs">
+      <DependentUpon>TutorMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Tutor\AddFreeTest.aspx.cs">
+      <DependentUpon>AddFreeTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tutor\AddFreeTest.aspx.designer.cs">
+      <DependentUpon>AddFreeTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutor\AddMultipleTest.aspx.cs">
+      <DependentUpon>AddMultipleTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tutor\AddMultipleTest.aspx.designer.cs">
+      <DependentUpon>AddMultipleTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutor\AddTestMenu.aspx.cs">
+      <DependentUpon>AddTestMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tutor\AddTestMenu.aspx.designer.cs">
+      <DependentUpon>AddTestMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutor\CheckFreeTestQuestions.aspx.cs">
+      <DependentUpon>CheckFreeTestQuestions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tutor\CheckFreeTestQuestions.aspx.designer.cs">
+      <DependentUpon>CheckFreeTestQuestions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutor\CheckMultiQuestions.aspx.cs">
+      <DependentUpon>CheckMultiQuestions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tutor\CheckMultiQuestions.aspx.designer.cs">
+      <DependentUpon>CheckMultiQuestions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutor\CheckQuestion.aspx.cs">
+      <DependentUpon>CheckQuestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tutor\CheckQuestion.aspx.designer.cs">
+      <DependentUpon>CheckQuestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutor\CompleteMarks.aspx.cs">
+      <DependentUpon>CompleteMarks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tutor\CompleteMarks.aspx.designer.cs">
+      <DependentUpon>CompleteMarks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutor\MarksFreeTest.aspx.cs">
+      <DependentUpon>MarksFreeTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tutor\MarksFreeTest.aspx.designer.cs">
+      <DependentUpon>MarksFreeTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutor\MarksFreeTestDetails.aspx.cs">
+      <DependentUpon>MarksFreeTestDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tutor\MarksFreeTestDetails.aspx.designer.cs">
+      <DependentUpon>MarksFreeTestDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutor\Tutor.aspx.cs">
+      <DependentUpon>Tutor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tutor\Tutor.aspx.designer.cs">
+      <DependentUpon>Tutor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutor\ViewGroup.aspx.cs">
+      <DependentUpon>ViewGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tutor\ViewGroup.aspx.designer.cs">
+      <DependentUpon>ViewGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutor\ViewGroupDetails.aspx.cs">
+      <DependentUpon>ViewGroupDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tutor\ViewGroupDetails.aspx.designer.cs">
+      <DependentUpon>ViewGroupDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutor\ViewStudentResult.aspx.cs">
+      <DependentUpon>ViewStudentResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tutor\ViewStudentResult.aspx.designer.cs">
+      <DependentUpon>ViewStudentResult.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="TutorMasterPage.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61535</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:61535/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
